@@ -1,0 +1,44 @@
+{
+  "name": "fastify-api-boilerplate",
+  "version": "1.0.0",
+  "author": "Pedro Clerici <pedro.clerici@protonmail.com>",
+  "description": "Fastify boilerplate for building RESTful APIs.",
+  "keywords": ["boilerplate", "template", "fastify", "api", "rest"],
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "tsup --config tsup.config.ts",
+    "dev": "tsx watch .",
+    "test": "NODE_OPTIONS='--import tsx' vitest",
+    "coverage": "NODE_OPTIONS='--import tsx' vitest run --coverage",
+    "lint": "biome check .",
+    "lint:fix": "biome check . --fix",
+    "format": "biome format .",
+    "preinstall": "npx only-allow pnpm"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@fastify/autoload": "^6.0.1",
+    "@fastify/swagger": "^9.1.0",
+    "@scalar/fastify-api-reference": "1.25.11",
+    "dotenv": "^16.4.5",
+    "fastify": "^5.0.0",
+    "fastify-zod-openapi": "^2.0.0",
+    "pino-pretty": "^11.2.2",
+    "zod": "^3.23.8",
+    "zod-openapi": "^3.0.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.2",
+    "@types/supertest": "^6.0.2",
+    "@vitest/coverage-v8": "^2.1.2",
+    "only-allow": "^1.2.1",
+    "supertest": "^7.0.0",
+    "tsup": "^8.3.0",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2",
+    "vitest": "^2.1.2"
+  },
+  "packageManager": "pnpm@9.10.0"
+}
